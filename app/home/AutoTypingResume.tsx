@@ -48,7 +48,7 @@ export const AutoTypingResume = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex justify-center items-center w-full h-full p-4 sm:p-6 lg:p-8">
       <ResumeIFrameCSR documentSize="Letter" scale={0.7}>
         <ResumePDF
           resume={resume}
@@ -67,6 +67,6 @@ export const AutoTypingResume = () => {
           }}
         />
       </ResumeIFrameCSR>
-    </>
+    </div>
   );
 };

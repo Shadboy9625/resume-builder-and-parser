@@ -13,13 +13,13 @@ export const TopNavBar = () => {
     <header
       aria-label="Site Header"
       className={cx(
-        "flex h-[var(--top-nav-bar-height)] items-center border-b-2 border-gray-100 px-3 lg:px-12",
+        "flex h-[var(--top-nav-bar-height)] items-center border-b-2 border-gray-100 px-3 sm:px-6 lg:px-12",
         isHomePage && "bg-dot"
       )}
     >
       <div className="flex h-10 w-full items-center justify-between">
         <Link href="/">
-          <div className="flex items-center justify-center gap-1">
+          <div className="flex items-center justify-center gap-1 ml-2">
             <Image
               src={"assets/heart.svg"}
               width={16}
@@ -35,7 +35,7 @@ export const TopNavBar = () => {
         </Link>
         <nav
           aria-label="Site Nav Bar"
-          className="flex items-center gap-2 text-sm font-medium"
+          className="flex items-center gap-2 text-sm font-medium ml-8"
         >
           {[
             ["/resume-builder", "Builder"],
@@ -43,7 +43,7 @@ export const TopNavBar = () => {
           ].map(([href, text]) => (
             <Link
               key={text}
-              className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4"
+              className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 sm:px-3 lg:px-4"
               href={href}
             >
               {text}
